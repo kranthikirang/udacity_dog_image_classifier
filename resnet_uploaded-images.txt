@@ -1,0 +1,106 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 6 key-value pairs.
+Below are 6 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                 Coffee_cup.jpg  label:                 coffee cup
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:              Pomeranian_01.jpg  label:                 pomeranian
+ 5 key:              Pomeranian_02.jpg  label:                 pomeranian
+ 6 key:              Black_Bear_01.jpg  label:                 black bear
+No Match found for the breed dog in file Dog_01.jpg
+No Match found for the breed coffee cup in file Coffee_cup.jpg
+No Match found for the breed dog in file Dog_02.jpg
+Match found for the breed pomeranian in file Pomeranian_01.jpg
+No Match found for the breed pomeranian in file Pomeranian_02.jpg
+Match found for the breed black bear in file Black_Bear_01.jpg
+
+     MATCH:
+
+             Pomeranian_01.jpg: 
+Real:                 pomeranian   Classifier:                     pomeranian
+
+             Black_Bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear,black bear,ursus americanus,euarctos americanus
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                     great dane
+
+                Coffee_cup.jpg: 
+Real:                 coffee cup   Classifier:                       espresso
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                        gazelle
+
+             Pomeranian_02.jpg: 
+Real:                 pomeranian   Classifier:                persian cat,cat
+
+# Total Images 6 # Matches: 2 # NOT Matches: 4
+
+     MATCH:
+
+             Pomeranian_01.jpg: 
+Real:                 pomeranian   Classifier:                     pomeranian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+             Black_Bear_01.jpg: 
+Real:                 black bear   Classifier: american black bear,black bear,ursus americanus,euarctos americanus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                     great dane  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                Coffee_cup.jpg: 
+Real:                 coffee cup   Classifier:                       espresso  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                        gazelle  
+PetLabelDog: 1  ClassLabelDog: 0
+
+             Pomeranian_02.jpg: 
+Real:                 pomeranian   Classifier:                persian cat,cat  
+PetLabelDog: 1  ClassLabelDog: 0
+
+# Total Images 6 # Matches: 2 # NOT Matches: 4
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  25.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  25.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+╒════════════════════╤═══╕
+│ # N Images         │ 6 │
+├────────────────────┼───┤
+│ # N Dog Images     │ 4 │
+├────────────────────┼───┤
+│ # Not-a Dog Images │ 2 │
+╘════════════════════╧═══╛
+summary statistics (percentages) on Model Run: 
+╒══════════════════════════╤═══════════════════════╤══════════════════╤════════════════════╤══════════════════╕
+│ CNN Model Architecture   │   % Not-a-Dog Correct │   % Dogs Correct │   % Breeds Correct │   % Match Labels │
+╞══════════════════════════╪═══════════════════════╪══════════════════╪════════════════════╪══════════════════╡
+│ RESNET                   │                   100 │               50 │                 25 │          33.3333 │
+╘══════════════════════════╧═══════════════════════╧══════════════════╧════════════════════╧══════════════════╛
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        dog   Classifier:                        gazelle
+Real:                 pomeranian   Classifier:                persian cat,cat
+
+INCORRECT Dog Breed Assignment:
+Pet_label:   dog   Classifier_label:                     great dane
+
+** Total Elapsed Runtime: 0:0:0

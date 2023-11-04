@@ -1,0 +1,104 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 6 key-value pairs.
+Below are 6 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                 Coffee_cup.jpg  label:                 coffee cup
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:              Pomeranian_01.jpg  label:                 pomeranian
+ 5 key:              Pomeranian_02.jpg  label:                 pomeranian
+ 6 key:              Black_Bear_01.jpg  label:                 black bear
+No Match found for the breed dog in file Dog_01.jpg
+No Match found for the breed coffee cup in file Coffee_cup.jpg
+No Match found for the breed dog in file Dog_02.jpg
+Match found for the breed pomeranian in file Pomeranian_01.jpg
+No Match found for the breed pomeranian in file Pomeranian_02.jpg
+No Match found for the breed black bear in file Black_Bear_01.jpg
+
+     MATCH:
+
+             Pomeranian_01.jpg: 
+Real:                 pomeranian   Classifier:                     pomeranian
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: arabian camel,dromedary,camelus dromedarius
+
+                Coffee_cup.jpg: 
+Real:                 coffee cup   Classifier:                       espresso
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                        bittern
+
+             Pomeranian_02.jpg: 
+Real:                 pomeranian   Classifier:                         langur
+
+             Black_Bear_01.jpg: 
+Real:                 black bear   Classifier: chimpanzee,chimp,pan troglodytes
+
+# Total Images 6 # Matches: 1 # NOT Matches: 5
+
+     MATCH:
+
+             Pomeranian_01.jpg: 
+Real:                 pomeranian   Classifier:                     pomeranian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: arabian camel,dromedary,camelus dromedarius  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                Coffee_cup.jpg: 
+Real:                 coffee cup   Classifier:                       espresso  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                        bittern  
+PetLabelDog: 1  ClassLabelDog: 0
+
+             Pomeranian_02.jpg: 
+Real:                 pomeranian   Classifier:                         langur  
+PetLabelDog: 1  ClassLabelDog: 0
+
+             Black_Bear_01.jpg: 
+Real:                 black bear   Classifier: chimpanzee,chimp,pan troglodytes  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 6 # Matches: 1 # NOT Matches: 5
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+Pct Corr dog:  25.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  25.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  6  N Dog Images:  4  N NotDog Images:  2 
+Pct Corr dog:  25.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  25.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+╒════════════════════╤═══╕
+│ # N Images         │ 6 │
+├────────────────────┼───┤
+│ # N Dog Images     │ 4 │
+├────────────────────┼───┤
+│ # Not-a Dog Images │ 2 │
+╘════════════════════╧═══╛
+summary statistics (percentages) on Model Run: 
+╒══════════════════════════╤═══════════════════════╤══════════════════╤════════════════════╤══════════════════╕
+│ CNN Model Architecture   │   % Not-a-Dog Correct │   % Dogs Correct │   % Breeds Correct │   % Match Labels │
+╞══════════════════════════╪═══════════════════════╪══════════════════╪════════════════════╪══════════════════╡
+│ ALEXNET                  │                   100 │               25 │                 25 │          16.6667 │
+╘══════════════════════════╧═══════════════════════╧══════════════════╧════════════════════╧══════════════════╛
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        dog   Classifier: arabian camel,dromedary,camelus dromedarius
+Real:                        dog   Classifier:                        bittern
+Real:                 pomeranian   Classifier:                         langur
+
+** Total Elapsed Runtime: 0:0:0
